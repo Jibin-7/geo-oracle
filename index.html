@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080b0d">
+  <meta name="description" content="GeoOracle — an evidence-led view of Mumbai's observed air quality and coastal conditions, 2023–2025.">
+  <title>GeoOracle · Mumbai air intelligence</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+      <a class="brand" href="#overview" aria-label="GeoOracle home">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="brand-name">geo<span>oracle</span><small>COASTAL AIR INTELLIGENCE</small></span>
+      </a>
+      <div class="region-tag"><span class="region-dot"></span> MUMBAI <span class="tag-divider">/</span> 18.9° N</div>
+      <div class="nav-label">WORKSPACE</div>
+      <nav class="primary-nav">
+        <a href="#overview" data-route="overview" class="nav-link"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 13h7V4H4v9Zm0 7h7v-4H4v4Zm11 0h5v-9h-5v9Zm0-16v4h5V4h-5Z"/></svg></span><span>Overview</span><kbd>01</kbd></a>
+        <a href="#satellite" data-route="satellite" class="nav-link"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.5"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3M7.2 7.2l2.1 2.1m5.4 5.4 2.1 2.1m0-9.6-2.1 2.1m-5.4 5.4-2.1 2.1"/><circle cx="12" cy="12" r="2"/></svg></span><span>Satellite atlas</span><kbd>02</kbd></a>
+        <a href="#stations" data-route="stations" class="nav-link"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.15 7-12a7 7 0 1 0-14 0c0 5.85 7 12 7 12Z"/><circle cx="12" cy="9" r="2.3"/></svg></span><span>Station field</span><kbd>03</kbd></a>
+        <a href="#observations" data-route="observations" class="nav-link"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4h14v16H5zM8 8h8M8 12h8M8 16h5"/></svg></span><span>Observations</span><kbd>04</kbd></a>
+        <a href="#methodology" data-route="methodology" class="nav-link"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21V5.5Zm0 0V19m4-12h8m-8 4h8"/></svg></span><span>Method & limits</span><kbd>05</kbd></a>
+      </nav>
+
+      <div class="sidebar-spacer"></div>
+      <div class="sidebar-note">
+        <div class="sidebar-note-kicker"><span class="tiny-wave" aria-hidden="true">≈</span> FIELD NOTE 001</div>
+        <p>One city. Eighteen pollutant layers. Three source families.</p>
+        <span>CPCB · GEOS-CF · ERA5</span>
+      </div>
+      <div class="sidebar-footer"><span class="footer-orbit"></span><span>Grounded in a 59-field dataset</span><button id="sidebar-collapse" type="button" aria-label="Collapse sidebar" title="Collapse sidebar">‹</button></div>
+    </aside>
+
+    <main class="main-shell">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button id="mobile-menu" class="icon-button mobile-menu" type="button" aria-label="Open navigation"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+          <div class="breadcrumb"><span>GeoOracle</span><span class="crumb-slash">/</span><strong id="breadcrumb-current">Overview</strong></div>
+        </div>
+        <div class="topbar-right">
+          <span class="coverage-chip"><span class="pulse-dot"></span> HISTORICAL SERIES</span>
+          <button class="status-button" id="system-status" type="button" title="Check local dataset index status"><span class="status-dot"></span><span id="status-label">Checking source</span><svg viewBox="0 0 16 16"><path d="m4 6 4 4 4-4"/></svg></button>
+        </div>
+      </header>
+      <div id="page-host" class="page-host" aria-live="polite"></div>
+    </main>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="modal-root"></div>
+  <script src="/app.js" defer></script>
+</body>
+</html>
