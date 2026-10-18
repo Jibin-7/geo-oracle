@@ -1,6 +1,6 @@
-# GeoOracle · Mumbai air intelligence
+# GeoOracle | Mumbai Air Quality Intelligence Explorer
 
-A local, evidence-led interface for exploring the supplied Mumbai CPCB + ERA5 + GEOS-CF model-ready dataset. The app shows historical observations and derived means; it does not train a model, issue a forecast, calculate AQI, or create risk classifications.
+An interactive local-first explorer for Mumbai air-quality and environmental observations from CPCB, ERA5, and GEOS-CF datasets. The app shows historical observations and derived means; it does not train a model, issue a forecast, calculate AQI, or create risk classifications.
 
 ## Run locally
 
